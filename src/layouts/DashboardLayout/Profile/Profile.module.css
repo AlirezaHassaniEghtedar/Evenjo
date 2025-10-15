@@ -1,0 +1,75 @@
+.profile {
+  .greetings {
+    display: grid;
+    grid-template-areas:
+      "userIcon username"
+      "userIcon email";
+
+    justify-content: start;
+    align-items: center;
+
+    column-gap: 2rem;
+
+    padding-block: 3rem;
+
+    span:nth-of-type(1) {
+      grid-area: userIcon;
+
+      background-color: var(--color-primary-500);
+
+      border: 5px solid var(--color-primary-400);
+      border-radius: 999rem;
+
+      padding: 1rem;
+
+      display: grid;
+      place-content: center;
+      svg {
+        font-size: 6rem;
+      }
+    }
+
+    h2 {
+      font-size: var(--fz-800);
+
+      grid-area: username;
+    }
+    span:nth-of-type(2) {
+      grid-area: email;
+
+      color: var(--color-nuetral-200);
+    }
+  }
+
+  > form {
+    display: grid;
+    gap: 1rem;
+
+    button {
+      font-size: var(--fz-400);
+    }
+  }
+
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: var(--fz-500);
+    color: var(--color-nuetral-300);
+  }
+
+  .error {
+    background-color: var(--color-danger-100);
+    color: var(--color-text-100);
+    padding: 1rem;
+    border-radius: var(--border-radius-200);
+    margin-bottom: 1rem;
+  }
+
+  .success {
+    background-color: var(--color-success-600);
+    color: var(--color-text-100);
+    padding: 1rem;
+    border-radius: var(--border-radius-200);
+    margin-bottom: 1rem;
+  }
+}

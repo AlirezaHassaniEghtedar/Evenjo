@@ -1,0 +1,13 @@
+.root-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  main {
+    inline-size: min(76.5rem, 100% - 2rem);
+
+    margin-inline: auto;
+  }
+}

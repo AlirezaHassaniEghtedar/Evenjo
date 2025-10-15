@@ -1,0 +1,55 @@
+:root {
+  color-scheme: light;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+
+  caret-color: transparent;
+
+  scroll-behavior: smooth;
+}
+
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+body {
+  background-color: var(--color-surface-200);
+  color: var(--color-text-100);
+
+  font-size: var(--fz-400);
+}
+
+p {
+  color: var(--color-text-200);
+}

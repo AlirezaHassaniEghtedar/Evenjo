@@ -1,0 +1,25 @@
+.faq {
+  .title {
+    text-align: center;
+
+    padding-block: 8.75rem 3rem;
+
+    display: grid;
+    gap: 0.5rem;
+
+    inline-size: min(100%, 36.5rem);
+
+    margin-inline: auto;
+    h2 {
+      font-size: var(--fz-700);
+
+      span {
+        color: var(--color-primary-400);
+      }
+    }
+    p {
+      font-size: var(--fz-400);
+      color: var(--color-nuetral-200);
+    }
+  }
+}

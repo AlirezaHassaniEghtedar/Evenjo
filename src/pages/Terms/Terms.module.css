@@ -1,0 +1,39 @@
+.terms {
+  margin-block: 5rem;
+
+  display: grid;
+  gap: 4.5rem;
+
+  inline-size: 100%;
+
+  h1 {
+    font-size: var(--fz-800);
+    font-weight: 700;
+  }
+  > p {
+    font-size: var(--fz-500);
+    font-weight: 400;
+  }
+
+  section {
+    display: grid;
+    gap: 1.5rem;
+    h2 {
+      font-size: var(--fz-600);
+      font-weight: bold;
+    }
+    > p {
+      font-size: var(--fz-400);
+      font-weight: 600;
+    }
+
+    > ul {
+      list-style: disc;
+
+      li {
+        font-size: var(--fz-400);
+        font-weight: 400;
+      }
+    }
+  }
+}

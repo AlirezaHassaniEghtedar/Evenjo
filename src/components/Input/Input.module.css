@@ -1,0 +1,122 @@
+.input-wrapper {
+  display: grid;
+  gap: 0.5rem;
+
+  .input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+
+    inline-size: 100%;
+
+    background-color: var(--color-nuetral-700);
+
+    padding: 1rem 1.25rem;
+
+    border-radius: var(--border-radius-200);
+
+    position: relative;
+
+    transition: var(--transition);
+
+    border: 1px solid transparent;
+
+    &:hover,
+    &:focus-within {
+      border-color: var(--color-primary-500);
+
+      transition: var(--transition);
+
+      svg {
+        color: var(--color-primary-500);
+      }
+
+      input {
+        color: var(--color-primary-500);
+
+        caret-color: var(--color-primary-500);
+      }
+
+      label {
+        color: var(--color-primary-500);
+      }
+    }
+
+    > svg {
+      font-size: var(--fz-600);
+
+      transition: var(--transition);
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      font-size: var(--fz-500);
+
+      color: var(--color-nuetral-100);
+
+      caret-color: var(--color-nuetral-100);
+
+      flex-grow: 1;
+    }
+
+    label {
+      font-size: var(--fz-300);
+      color: var(--color-nuetral-200);
+
+      position: absolute;
+
+      inset-block-start: -1px;
+      inset-inline-start: 1.25rem;
+
+      transform: translateY(-50%);
+
+      transition: var(--transition);
+
+      padding-inline: 0.25rem;
+
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--color-nuetral-700) 50%
+      );
+    }
+
+    span {
+      display: flex;
+
+      cursor: pointer;
+
+      svg {
+        font-size: var(--fz-600);
+
+        transition: var(--transition);
+      }
+    }
+  }
+
+  .input:has(input:user-invalid) {
+    border-color: var(--color-danger-600);
+
+    label {
+      color: var(--color-danger-600);
+    }
+
+    > svg {
+      color: var(--color-danger-600);
+    }
+  }
+
+  .error {
+    display: none;
+
+    color: var(--color-danger-600);
+  }
+
+  .input:has(input:user-invalid) + .error {
+    display: block;
+  }
+}

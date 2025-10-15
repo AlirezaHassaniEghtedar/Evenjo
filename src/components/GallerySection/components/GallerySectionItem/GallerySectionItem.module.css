@@ -1,0 +1,39 @@
+.gallery-section-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+
+  background-color: var(--color-nuetral-800);
+  border: 1px solid var(--color-nuetral-500);
+  border-radius: var(--border-radius-300);
+
+  inline-size: 17.5rem;
+  block-size: auto;
+
+  padding: 0.25rem;
+
+  transition: var(--transition);
+
+  &:hover {
+    border: 1px solid var(--color-primary-500);
+    background-color: var(--color-shade-500);
+  }
+
+  img {
+    border-radius: var(--border-radius-300);
+  }
+
+  .writings {
+    display: grid;
+    gap: 0.25rem;
+
+    .title {
+      font-size: var(--fz-400);
+    }
+    span {
+      font-size: var(--fz-300);
+      color: var(--color-nuetral-200);
+    }
+  }
+}

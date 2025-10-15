@@ -1,0 +1,25 @@
+.auth-layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+  background: var(--color-surface-200);
+  .background-image {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
+
+    display: grid;
+    grid-template-areas: "background";
+
+    img {
+      grid-area: background;
+
+      margin-inline: auto;
+    }
+  }
+  .auth-main {
+    z-index: 1;
+  }
+}

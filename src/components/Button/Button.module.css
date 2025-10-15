@@ -1,0 +1,138 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    transition: var(--transition);
+
+    transform: translateY(-0.25rem);
+  }
+
+  &.primary {
+    --color-button: var(--color-primary-500);
+    --color-button-hover: var(--color-primary-600);
+    --color-button-text: var(--color-text-100);
+  }
+
+  &.danger {
+    --color-button: var(--color-danger-500);
+    --color-button-hover: var(--color-danger-400);
+    --color-button-pressed: var(--color-danger-600);
+    --color-button-text: var(--color-text-100);
+  }
+
+  &.solid {
+    background: var(--color-button);
+    color: var(--color-button-text);
+
+    border: none;
+
+    &:hover,
+    &:focus {
+      background: var(--color-button-hover);
+    }
+
+    &:active {
+      background-color: var(--color-button-pressed);
+    }
+  }
+
+  &.outlined {
+    background: transparent;
+    color: var(--color-button);
+
+    border: 1px solid var(--color-button);
+
+    &:hover,
+    &:focus {
+      background: var(--color-button);
+      color: var(--color-button-text);
+    }
+  }
+
+  &.rectangle {
+    border-radius: 0.5rem;
+
+    &.small {
+      padding-inline: 0.5rem;
+    }
+    &.medium {
+      padding-inline: 1rem;
+    }
+    &.large {
+      padding-inline: 2rem;
+    }
+  }
+
+  &.small {
+    block-size: 2rem;
+
+    svg {
+      block-size: 1.25rem;
+      inline-size: auto;
+    }
+  }
+  &.medium {
+    block-size: 2.5rem;
+
+    svg {
+      block-size: 1.25rem;
+      inline-size: auto;
+    }
+  }
+  &.large {
+    block-size: 3.5rem;
+
+    svg {
+      block-size: 1.5rem;
+      inline-size: auto;
+    }
+  }
+}
+
+button:not(:has(a)) {
+}
+
+button:has(> a) {
+  padding: 0;
+  block-size: 0;
+
+  > a {
+    display: grid;
+    place-content: center;
+
+    block-size: 100%;
+  }
+
+  &.rectangle {
+    &.small {
+      padding-inline: 0;
+
+      > a {
+        padding-inline: 0.5rem;
+      }
+    }
+    &.medium {
+      padding-inline: 0;
+
+      > a {
+        padding-inline: 1rem;
+      }
+    }
+    &.large {
+      padding-inline: 0;
+
+      > a {
+        padding-inline: 2rem;
+      }
+    }
+  }
+}

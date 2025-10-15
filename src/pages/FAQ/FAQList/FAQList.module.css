@@ -1,0 +1,84 @@
+.faq-list {
+  max-width: 50.5rem;
+  margin-inline: auto;
+
+  padding-block: 5rem;
+
+  .list {
+    display: grid;
+    gap: 1.25rem;
+    place-content: center;
+
+    .card {
+      background: var(--color-nuetral-800);
+      border-radius: var(--border-radius-200);
+      border: 1px solid var(--color-nuetral-700);
+
+      overflow: hidden;
+      transition:
+        background-color 200ms ease,
+        border-color 200ms ease;
+
+      > button {
+        background: transparent;
+        color: var(--color-text-100);
+
+        inline-size: 100%;
+
+        padding: 1rem;
+
+        border: none;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 0.75rem;
+
+        cursor: pointer;
+
+        text-align: start;
+        transform: none;
+
+        font-size: var(--fz-400);
+
+        &:hover {
+          transform: none;
+        }
+
+        > svg {
+          font-size: var(--fz-600);
+        }
+      }
+
+      .panel {
+        max-block-size: 0;
+        overflow: hidden;
+        transition: var(--transition);
+        opacity: 0;
+        border-top: 1px solid transparent;
+
+        .answer {
+          padding: 1rem 1rem 1rem 3.25rem;
+          color: var(--color-text-200);
+          line-height: 1.6;
+          font-size: var(--fz-400);
+        }
+      }
+
+      &.open {
+        > button {
+          svg {
+            &:nth-of-type(2) {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        .panel {
+          max-block-size: unset;
+          opacity: 1;
+          border-top-color: var(--color-nuetral-600);
+        }
+      }
+    }
+  }
+}

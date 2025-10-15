@@ -1,0 +1,29 @@
+.events-list {
+  h1 {
+    font-size: var(--fz-800);
+
+    text-align: center;
+
+    margin-block-end: 3rem;
+  }
+
+  margin-block: 2rem;
+
+  > ul {
+    display: grid;
+    gap: 1.5rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+}
+
+.error,
+.no-data {
+  display: grid;
+  place-content: center;
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  font-size: var(--fz-600);
+}

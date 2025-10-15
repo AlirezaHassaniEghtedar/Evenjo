@@ -1,0 +1,120 @@
+.login {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  place-content: center;
+  gap: 6rem;
+
+  inline-size: min(100%, 26.5rem);
+
+  margin-inline: auto;
+
+  .writings {
+    display: grid;
+    gap: 1.5rem;
+
+    text-align: center;
+    .logo {
+      font-family: "Lobster", cursive;
+
+      color: var(--color-text-100);
+
+      font-size: var(--fz-700);
+      font-weight: 700;
+
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--color-primary-500);
+
+        transform: translateY(-2px);
+
+        transition: var(--transition);
+      }
+    }
+
+    span {
+      color: var(--color-nuetral-100);
+    }
+  }
+
+  .error {
+    background-color: var(--color-danger-600);
+    color: var(--color-text-100);
+    padding: 1rem;
+    border-radius: var(--border-radius-200);
+    text-align: center;
+    font-weight: 500;
+  }
+
+  form {
+    display: grid;
+
+    gap: 1.5rem;
+
+    .remember-forgot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        input {
+          display: none;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          inline-size: 1.25rem;
+          block-size: 1.25rem;
+
+          border: 1px solid var(--color-nuetral-100);
+          border-radius: var(--border-radius-100);
+
+          transition: all 0.2s ease;
+        }
+
+        input:checked + span {
+          background-color: var(--color-primary-400);
+          border-color: var(--color-primary-400);
+        }
+
+        input:checked + span::after {
+          content: "✔";
+          line-height: 1;
+        }
+      }
+
+      > a {
+        color: var(--color-nuetral-200);
+
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--color-text-100);
+        }
+      }
+    }
+
+    > button {
+      font-size: var(--fz-400);
+    }
+
+    .create-account {
+      text-align: center;
+      color: var(--color-nuetral-200);
+
+      a {
+        color: var(--color-primary-400);
+      }
+    }
+  }
+}

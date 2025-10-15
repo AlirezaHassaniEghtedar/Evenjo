@@ -1,0 +1,20 @@
+.contact-form {
+  margin-block: 10rem;
+
+  form {
+    display: grid;
+    gap: 1.5rem;
+
+    h4 {
+      margin-block-end: 2rem;
+
+      font-size: var(--fz-700);
+
+      text-align: center;
+    }
+
+    button[type="submit"] {
+      font-size: var(--fz-400);
+    }
+  }
+}

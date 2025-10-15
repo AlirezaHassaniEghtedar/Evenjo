@@ -1,0 +1,47 @@
+.contact {
+  .hero-section {
+    display: grid;
+    gap: 4.5rem;
+
+    .writings {
+      display: grid;
+      gap: 4.5rem;
+
+      padding-block: 9.75rem 8.25rem;
+      margin-inline: auto;
+
+      inline-size: min(100%, 61.75rem);
+
+      text-align: center;
+
+      h1 {
+        font-size: var(--fz-900);
+        line-height: 1;
+
+        span {
+          display: inline-block;
+          line-height: 0;
+          transform: translate(-0.75rem, 2.5rem);
+          pointer-events: none;
+
+          svg {
+            inline-size: 1.25em;
+            block-size: 1.25em;
+          }
+        }
+      }
+
+      p {
+        font-size: var(--fz-500);
+        font-weight: 500;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .map {
+    margin-block: 3rem 5.5rem;
+
+    cursor: pointer;
+  }
+}
